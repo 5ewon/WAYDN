@@ -1,11 +1,17 @@
 import React from 'react';
-import Main from './components/Main';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Account from './components/Account';
+import Manage from './components/Manage';
 
 const App = () => {
   return (
-    <div>
-      <Main />
-    </div>
+    // <Account />
+    <Router>
+      <Routes>
+        <Route path={'/'} element={<Account />} />
+        <Route path={'Manage'} element={<Manage />} />
+      </Routes>
+    </Router>
   );
 }
 
